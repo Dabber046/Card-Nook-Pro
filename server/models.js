@@ -1,0 +1,1 @@
+// Sequelize models for Users, Cards
