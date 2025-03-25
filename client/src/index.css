@@ -1,1 +1,94 @@
-/* Tailwind with dark mode, animations */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #f0f0f0;
+    color: #222;
+  }
+  
+  .dark body {
+    background: #1a1a1a;
+    color: #f0f0f0;
+  }
+  
+  .app-container {
+    padding: 2rem;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+  }
+  
+  nav button {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    background: #222;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .dark nav button {
+    background: #eee;
+    color: #111;
+  }
+  
+  .auth-form input,
+  .auth-form button,
+  .dashboard input {
+    margin: 0.5rem 0;
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .auth-form button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    background: white;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dark li {
+    background: #333;
+  }
+  
+  .charizard {
+    background: #ffe0b2 !important;
+    font-weight: bold;
+    border: 2px solid orange;
+    animation: glow 1s infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 5px orange;
+    }
+    to {
+      box-shadow: 0 0 15px orange;
+    }
+  }
+  
