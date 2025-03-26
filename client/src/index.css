@@ -1,94 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Charizard styling */
+.charizard {
+  @apply bg-orange-100 text-orange-900 font-bold border-2 border-orange-500 animate-pulse;
+}
+
+/* Smooth transition for dark/light mode */
 body {
-    margin: 0;
-    font-family: sans-serif;
-    background: #f0f0f0;
-    color: #222;
-  }
-  
-  .dark body {
-    background: #1a1a1a;
-    color: #f0f0f0;
-  }
-  
-  .app-container {
-    padding: 2rem;
-    max-width: 600px;
-    margin: auto;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
-  }
-  
-  nav button {
-    padding: 0.4rem 0.8rem;
-    border: none;
-    background: #222;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .dark nav button {
-    background: #eee;
-    color: #111;
-  }
-  
-  .auth-form input,
-  .auth-form button,
-  .dashboard input {
-    margin: 0.5rem 0;
-    display: block;
-    width: 100%;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .auth-form button {
-    background: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    background: white;
-    margin: 0.5rem 0;
-    padding: 1rem;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .dark li {
-    background: #333;
-  }
-  
-  .charizard {
-    background: #ffe0b2 !important;
-    font-weight: bold;
-    border: 2px solid orange;
-    animation: glow 1s infinite alternate;
-  }
-  
-  @keyframes glow {
-    from {
-      box-shadow: 0 0 5px orange;
-    }
-    to {
-      box-shadow: 0 0 15px orange;
-    }
-  }
-  
+  @apply transition-colors duration-500;
+}
+
+/* Page container */
+.app-container {
+  @apply p-6 max-w-3xl mx-auto;
+}
+
+/* Navigation bar */
+nav {
+  @apply flex justify-between items-center mb-6 text-orange-400 bg-black px-6 py-4 rounded-xl shadow-lg;
+}
+
+/* Auth form */
+.auth-form input,
+.auth-form button {
+  @apply w-full p-2 my-2 rounded-lg border dark:bg-gray-800 dark:border-gray-700;
+}
+
+/* Dashboard input */
+.dashboard input {
+  @apply w-full p-3 border rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-orange-400 transition;
+}
+
+/* Card List */
+ul {
+  @apply space-y-3;
+}
+
+li {
+  @apply flex justify-between items-center p-4 rounded-xl shadow;
+}
+
+.dark li {
+  @apply bg-gray-700 text-white;
+}
