@@ -23,7 +23,7 @@ function App() {
 
   const login = async () => {
     const res = await axios.post('http://localhost:3000/api/login', { email, password });
-    localStorage.setItem('('token', res.data.token);
+    localStorage.setItem('token', res.data.token);
     setToken(res.data.token);
   };
 
@@ -110,12 +110,12 @@ function App() {
                 }).map(card => (
                   <li
                     key={card.id}
-                    className={\`
+                    className={`
                       flex justify-between items-center p-4 rounded-xl shadow-md
-                      \${card.name.toLowerCase().includes('charizard')
+                      ${card.name.toLowerCase().includes('charizard')
                         ? 'bg-orange-200 border-2 border-orange-500 animate-pulse font-bold text-orange-900'
                         : 'bg-gradient-to-r from-cyan-100 to-teal-100 dark:from-gray-700 dark:to-gray-600'}
-                    \`}
+                    `}
                   >
                     <span>{card.name}</span>
                     <div className="flex gap-3 items-center">
